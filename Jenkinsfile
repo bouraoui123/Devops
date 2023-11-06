@@ -5,7 +5,7 @@ pipeline {
 
         stage('Git Checkout') {
             steps {
-                git url: 'https://github.com/amaltrabelsi/DEVOPS'
+                git branch :'main' , url: 'https://github.com/bouraoui123/Devops_projet'
              }
         }
 
@@ -99,7 +99,7 @@ pipeline {
         always {
             emailext subject: 'Results for Jenkins',
                 body: 'success.',
-                to: 'amal.trabelsi@esprit.tn',
+                to: 'mohamediheb.bouraoui@esprit.tn',
                 recipientProviders: [culprits(), developers(), brokenBuildSuspects()]
         }
       }*/
