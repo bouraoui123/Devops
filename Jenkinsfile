@@ -9,7 +9,7 @@ pipeline {
         stage('git') {
             steps {
                 // Cloner le référentiel depuis votre système de contrôle de version
-                  git branch: 'main', url : 'https://github.com/Guesmiazer/Devops.git'
+                  git branch: 'main', url : 'https://github.com/bouraoui123/Devops_projet.git'
                   }
         }
         stage('Construction') {
