@@ -61,5 +61,16 @@ pipeline {
       sh 'mvn deploy'
            }
       }
+           stage('Docker Image ') {
+    steps {
+        script {
+            sh 'docker build -t devopsprojet . '
+            sh 'docker tag devopsprojet projet/devops'
+        }
+        
+      
+           }
+      }
+        
     }
 }
