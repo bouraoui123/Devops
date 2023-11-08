@@ -18,7 +18,7 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-     /*   stage('Tests') {
+       stage('Tests') {
             steps {
                 // Exécuter vos tests unitaires ou tests d'intégration
                 sh 'mvn test'
@@ -48,7 +48,7 @@ pipeline {
     }       
 
 }
-       stage('sonarqube') {
+   /*    stage('sonarqube') {
            steps {
            withSonarQubeEnv('sonarserver') {
                                       sh 'mvn sonar:sonar -Dsonar.java.binaries=target/classes'
@@ -60,7 +60,7 @@ pipeline {
     steps {
       sh 'mvn deploy'
            }
-      }*/
+      }
            stage('Docker Image ') {
     steps {
         script {
@@ -70,6 +70,7 @@ pipeline {
         
       
            }
+           */
       }
         
     }
