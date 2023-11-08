@@ -56,11 +56,10 @@ pipeline {
            }
        }
         //
-      // stage('Déploiement') {
-      //       steps {
-      //           // Déployer votre application sur un serveur ou une plateforme spécifique
-      //           sh 'mvn deploy'
-      //       }
-      //   }
+      stage('Déploiement Nexus') {
+    steps {
+      sh 'mvn deploy'
+           }
+      }
     }
 }
