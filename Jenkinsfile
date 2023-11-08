@@ -48,14 +48,14 @@ pipeline {
     }       
 
 }
-   /*    stage('sonarqube') {
+       stage('sonarqube') {
            steps {
            withSonarQubeEnv('sonarserver') {
                                       sh 'mvn sonar:sonar -Dsonar.java.binaries=target/classes'
            }
            }
        }
-        //
+        
       stage('Déploiement Nexus') {
     steps {
       sh 'mvn deploy'
@@ -72,6 +72,6 @@ pipeline {
            }
        
       }
-            */
+    
     }
 }
